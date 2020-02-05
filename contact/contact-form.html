@@ -8,6 +8,17 @@
     <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/home/my-example.html>HOME</a>
     <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/self-introduction/profile.html>ABOUT</a>
     <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/contact/contact-form.html >CONTACT</a>
+
+    <script language="javascript" type="text/javascript">
+          function OnButtonClick(){
+              target = document.getElementById("output_button");
+              target.innerHTML = "汎用ボタンが押下されました"
+          }
+          function OnSubmitClick(){
+              target = document.getElementById("output_submit");
+              target.innerHTML = "送信ボタンが押下されました"
+          }
+    </script>
   </head>
   <body>
     <div class="contact-form">
@@ -29,10 +40,20 @@
         <textarea cols="100" rows="10" readonly>お気軽にどうぞ！</textarea>
 
         <p>送信する</p>
-        <input type="submit" value="送信">
+        <input type="submit" value="送信" onclick="OnSubmitClick();"><br/>
+        <br/>
+        <div id="output_submit"></div>
+
+
+        <p>汎用ボタン</p>
+        <input type="button" value="汎用ボタン" onclick="OnButtonClick();"><br/>
+        <br/>
+        <div id="output_button"></div>
 
         <p>クリア</p>
-        <input type="reset" value="クリア">
+        <input type="reset" value="クリア" onclick="document.getElementById('output').innerHTML='クリアボタンが押されました';"><br/>
+        <br/>
+        <div id="output"></div>
     </div>
   </body>
 </html>
