@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>javascript-SAMPLES</title>
+    <link rel="shortcut icon"
+          href="https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/Sanford_Thayer_1860s.jpg"
+          type="image/jpeg">
+    <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/home/my-example.html>HOME</a>
+    <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/self-introduction/profile.html>ABOUT</a>
+    <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/contact/contact-form.html >CONTACT</a>
+    <a href=https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/javascript-samples/samples.html>javascript-SAMPLES</a>
+
+    <script language="javascript" type="text/javascript">
+          function OnButtonClick(){
+            target = document.getElementById("output_button");
+            target.innerHTML = "汎用ボタンが押下されました"
+          }
+          function OnSubmitClick(){
+            target = document.getElementById("output_submit");
+            target.innerHTML = "送信ボタンが押下されました"
+          }
+          function OnClickGetURL(){
+            document.getElementById("output_getURL_by_function").textContent = document.URL;
+          }
+          function OnClickGetTitle(){
+            document.getElementById("output_get_title_by_function").textContent = document.title;
+          }
+    </script>
+  </head>
+  <body>
+    <h1>javascript-SAMPLES<span>.</span></h1>
+    <br/>
+    <div class="contents-item">
+      <img src="https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/Sanford_Thayer_1860s.jpg">
+      <p>パブリック・ドメイン</p>
+    </div>
+    <hr/>
+
+    <div class="document-class-form">
+      <p>Get URL by function</p>
+      <input type="button" value="get URL by function" onclick="OnClickGetURL()";>
+      <br/><br/>
+      <div id="output_getURL_by_function"></div>
+      <hr/>
+
+      <p>Get URL by HTML</p>
+      <p id="urltext">
+        URL:<br/>
+        <span id="url">https://ml-test-kj.s3-ap-southeast-1.amazonaws.com/javascript-samples/samples.html</span>
+      </p>
+      <hr/>
+
+      <p>Get document Title by javascript</p>
+      <input type="button" value="get title by function" onclick="OnClickGetTitle()";>
+      <br/><br/>
+      <div id="output_get_title_by_function"></div>
+
+      <script>
+        alert(document.title);
+        document.title = "this is displayed by javascript";
+        alert(document.title);
+      </script>
+      <hr/>
+
+      
+
+      <hr/>
+
+    </div>
+  </body>
+</html>
